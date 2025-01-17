@@ -30,7 +30,10 @@ const SignUp = () => {
   const handleSubmit = async (e)=> {
     e.preventDefault();
     try{
-      const res = await axios.post("http://localhost:4005/api/v1/auth/signup", formData)
+      const res = await axios.post(
+        "https://blogsite-cxdu.onrender.com/api/v1/auth/signup",
+        formData
+      );
 
       if(res.status === 201){
         localStorage.setItem("pantone", JSON.stringify(res.data))

@@ -23,7 +23,10 @@ const LogIn = () => {
     e.preventDefault();
     try{
       setLoading(true)
-      const response = await axios.post("http://localhost:4005/api/v1/auth/login", {username, password});
+      const response = await axios.post(
+        "https://blogsite-cxdu.onrender.com/api/v1/auth/login",
+        { username, password }
+      );
       if (response.status === 201){
         localStorage.getItem("pantone", JSON.stringify(response.data));
         dispatch({type: "LOGIN", payload: response.data})

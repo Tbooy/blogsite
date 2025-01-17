@@ -3,7 +3,9 @@ import useFetch from '../../Hooks/useFetch'
 const BlogDetails = () => {
 
     const {_id} = useParams()
-    const blog =useFetch(`http://localhost:4005/api/v1/blogs/${_id}`)
+    const blog = useFetch(
+      `https://blogsite-cxdu.onrender.com/api/v1/blogs/${_id}`
+    );
     console.log(blog)
     
     const {loading,data,error} =blog;

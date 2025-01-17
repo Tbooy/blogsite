@@ -24,7 +24,7 @@ const AddBlog = () => {
       setError(null);
 
       const response = await axios.post(
-        "http://localhost:4005/api/v1/blogs",
+        "https://blogsite-cxdu.onrender.com/api/v1/blogs",
         formData
       );
 
